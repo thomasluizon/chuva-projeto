@@ -1,2 +1,32 @@
 main {
+   .container {
+      padding-top: 1.25rem;
+      padding-bottom: 3.125rem;
+   }
+   .main__title {
+      font: 900 1.25rem $secondary-font;
+      color: $primary-color;
+   }
+}
+
+.main__header {
+   grid-area: main-header;
+}
+
+.main__share {
+   display: flex;
+   flex-direction: column;
+   .share-buttons {
+      display: flex;
+      gap: 5px;
+      a {
+         background: $primary-color;
+         display: inline-flex;
+         align-items: center;
+         gap: 5px;
+         padding: 0.375rem 0.75rem;
+         border-radius: 4px;
+         color: white;
+      }
+   }
 }
