@@ -1,0 +1,20 @@
+@use './abstracts/' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap');
+@import './sidebar';
+@import './header';
+@import './main';
+
+body {
+   font-family: $primary-font;
+}
+
+.wrapper {
+   width: 84%;
+   margin-left: 16%;
+}
+
+.container {
+   padding: 0 5%;
+   height: 100%;
+}

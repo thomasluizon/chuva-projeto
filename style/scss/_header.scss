@@ -1,0 +1,70 @@
+.header {
+   background-color: $background-color;
+   color: #725c5c;
+   height: 4.25rem;
+   .container {
+      @include flex(space-between);
+   }
+
+   .header__text-wrapper {
+      font-weight: 400;
+      font-size: 0.875rem;
+      font-family: $secondary-font;
+      height: 100%;
+      line-height: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h2 {
+         font-size: 1.375rem;
+      }
+   }
+
+   .header__nav {
+      @include flex(center);
+      gap: 1.375rem;
+   }
+
+   .nav__profile {
+      font-size: 0.875rem;
+      display: flex;
+      gap: 2px;
+      div {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+      }
+      .nav__img-wrapper {
+         img {
+            border-radius: 50%;
+            position: relative;
+         }
+         &::before {
+            content: '2';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #f85959;
+            z-index: 2;
+            color: white;
+            font-size: 10px;
+            @include flex(center);
+         }
+      }
+   }
+
+   .nav__lang-selector {
+      @include flex(center);
+      background: $background-color;
+      cursor: pointer;
+      gap: 5px;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+      padding: 0.5rem;
+      transition: 0.1s filter;
+      &:hover {
+         filter: brightness(0.9);
+      }
+   }
+}

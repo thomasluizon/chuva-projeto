@@ -1,0 +1,51 @@
+.sidebar {
+   width: 16%;
+   height: 100vh;
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+   img {
+      max-width: 220px;
+      width: 100%;
+      margin: 0 auto;
+   }
+
+   .sidebar__header {
+      background: $main-gradient-color;
+      color: white;
+      font: 700 1.875rem $secondary-font;
+      height: 4.25rem;
+      text-align: center;
+      @include flex(center);
+   }
+
+   .sidebar__menu li {
+      background: white;
+      color: #725c5c;
+      font-weight: 500;
+      line-height: 19px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+      padding: 0.4375rem 1.5rem;
+      cursor: pointer;
+      transition: 0.2s filter;
+      &:hover {
+         filter: brightness(0.9);
+      }
+   }
+
+   .active {
+      background-color: $background-color;
+      position: relative;
+      &::before {
+         content: '';
+         background: $secondary-gradient-color;
+         width: 5px;
+         height: 100%;
+         position: absolute;
+         left: 0;
+         top: 0;
+      }
+   }
+}
