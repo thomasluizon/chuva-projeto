@@ -1,5 +1,6 @@
 .sidebar {
-   width: 16%;
+   min-width: 16%;
+   max-width: 19%;
    height: 100vh;
    position: fixed;
    display: flex;
@@ -16,7 +17,7 @@
       background: $main-gradient-color;
       color: white;
       font: 700 1.875rem $secondary-font;
-      height: 4.25rem;
+      min-height: 4.25rem;
       text-align: center;
       @include flex(center);
    }
