@@ -305,7 +305,7 @@ button:hover {
 .discussions__topics {
   padding: 0.9375rem;
 }
-.discussions__topics ul {
+.discussions__topics .topics__items {
   display: flex;
   flex-direction: column;
   gap: 17px;
@@ -315,13 +315,16 @@ button:hover {
   border: 1px solid #e7e7e7;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+}
+.topics__item .item__main {
   padding: 1.0625rem 1.4375rem;
+  cursor: pointer;
 }
 .topics__item h3 {
   font: 700 1.125rem "Roboto", sans-serif;
   color: #ed7839;
 }
-.topics__item .item__user {
+.topics__item h4 {
   font: 500 0.75rem "Quicksand", sans-serif;
   margin-bottom: 10px;
 }
@@ -340,6 +343,39 @@ button:hover {
   justify-content: center;
   padding: 3px 7px;
   border-radius: 2px;
+}
+.topics__item .display {
+  display: none;
+}
+.topics__item .topic__comments-comment {
+  padding: 1.0625rem 1.4375rem;
+  background: #f8f8f8;
+  border: 1px solid #e7e7e7;
+}
+.topics__item .topic__comments-comment p {
+  font-size: 14px;
+}
+.topics__item .topic__comments-comment header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topics__item .topic__comments-comment header .role {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.topics__item .topic__comments-comment header .role p {
+  font: 700 0.875rem "Quicksand", sans-serif;
+  color: #ed7839;
+}
+.topics__item .topic__comments-answer {
+  padding: 1.0625rem 1.4375rem;
+  border: 1px solid #e7e7e7;
+}
+.topics__item .topic__comments-answer p {
+  font-size: 14px;
 }
 
 footer {
