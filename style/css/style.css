@@ -138,6 +138,10 @@ main .main__title {
   color: #ed7839;
 }
 
+.display {
+  display: none;
+}
+
 button {
   cursor: pointer;
   transition: 0.2s filter;
@@ -235,6 +239,7 @@ button:hover {
   margin-top: 0.875rem;
   border: 1px solid #ececec;
   border-radius: 3px;
+  cursor: pointer;
 }
 .main__summary p {
   display: inline-block;
@@ -243,13 +248,9 @@ button:hover {
   font-size: 0.875rem;
   font-weight: 400;
 }
-.main__summary p #show {
+.main__summary p .show span {
   font-weight: 700;
   color: #ed7839;
-  cursor: pointer;
-}
-.main__summary p #hidden {
-  display: none;
 }
 
 .main__discussions {
@@ -259,33 +260,16 @@ button:hover {
 }
 
 .discussions__create {
-  text-align: center;
   padding: 0.9375rem;
-}
-.discussions__create h3 {
-  font: 700 1.125rem "Roboto", sans-serif;
-  color: #ed7839;
-  margin-bottom: 1.6875rem;
-}
-.discussions__create .icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.25rem;
-  margin-bottom: 2.1875rem;
-}
-.discussions__create p {
-  font-size: 0.875rem;
-  line-height: 19.25px;
 }
 .discussions__create .separator {
   width: 100%;
   height: 1px;
   border: 1px solid #e7e7e7;
-  position: relative;
   margin: 2rem 0 1rem 0;
+  position: relative;
 }
-.discussions__create .discussions-btn {
+.discussions__create .separator-btn {
   position: absolute;
   top: -1rem;
   right: 50%;
@@ -300,6 +284,94 @@ button:hover {
   color: white;
   font: 700 0.9375rem "Quicksand", sans-serif;
   padding: 7px 13px;
+}
+.discussions__create .create__title {
+  font: 700 1.125rem "Roboto", sans-serif;
+  color: #ed7839;
+  margin-bottom: 1.6875rem;
+}
+.discussions__create .create__desc {
+  font-size: 0.875rem;
+  line-height: 19.25px;
+}
+
+.state1 {
+  text-align: center;
+}
+.state1 .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.25rem;
+  margin-bottom: 2.1875rem;
+}
+
+.state2 .separator {
+  margin-top: 0.9375rem;
+}
+.state2 h4 {
+  font-size: 0.875rem;
+  text-align: center;
+  margin-bottom: 1.375rem;
+}
+.state2 form {
+  display: flex;
+  flex-direction: column;
+}
+.state2 form label {
+  font: 700 1.125rem "Roboto", sans-serif;
+  color: #ed7839;
+}
+.state2 #topic {
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  outline: none;
+}
+.state2 .textarea {
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+.state2 .textarea textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.state2 .textarea .content__submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eaf1f2;
+  border: 1px solid #cccccc;
+  border-radius: 0px 0px 4px 4px;
+}
+.state2 .textarea .content__submit .submit-btn {
+  color: white;
+  background: linear-gradient(180deg, #feb154 0%, #f1833e 100%);
+  padding: 0.625rem 4.125rem;
+}
+.state2 .textarea .wrapper {
+  display: flex;
+  gap: 1.875rem;
+  margin: 0;
+  padding: 0.625rem 1.875rem;
+}
+
+.state3 {
+  text-align: center;
+}
+.state3 a {
+  color: #ed7839;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin: 1.875rem 0;
+  display: inline-block;
+}
+.state3 .create__title {
+  margin-bottom: 1.125rem;
 }
 
 .discussions__topics {
@@ -331,6 +403,9 @@ button:hover {
 .topics__item .item__comment {
   font-size: 0.875rem;
   margin-bottom: 11px;
+}
+.topics__item .item__comment .appear {
+  display: none;
 }
 .topics__item .topic__socials {
   display: flex;

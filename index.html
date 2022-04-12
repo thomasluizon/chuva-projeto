@@ -72,6 +72,7 @@
                      Campinas/SP
                   </h2>
                </header>
+
                <section class="main__share">
                   <div class="share-buttons">
                      <a href="#"
@@ -85,12 +86,15 @@
                   </div>
                   <p>Como citar esse trabalho?</p>
                </section>
+
                <section class="main__video">
                   <video
                      controls
                      poster="assets/imgs/video-overlay.png"
+                     src="assets/video/video.mp4"
                   ></video>
                </section>
+
                <section class="main__details">
                   <header class="title">
                      <h2>Detalhes</h2>
@@ -126,6 +130,7 @@
                      </ul>
                   </div>
                </section>
+
                <section class="main__summary">
                   <header class="title">
                      <h2>Resumo</h2>
@@ -144,9 +149,9 @@
                      condimentum lobortis et non lorem. Sed id nisl metus.
                      Quisque sollicitudin ligula in sapien scelerisque, ac
                      gravida eros vestibulum. Etiam aliquam dictum nisl, vel
-                     aliquet enim accumsan sit ametl accumsant<span id="show"
-                        >... ver mais</span
-                     ><span id="hidden">
+                     aliquet enim accumsan sit ametl accumsant<span class="show"
+                        >... <span>ver mais</span></span
+                     ><span class="hidden display">
                         <br />
                         <br />
                         <br />
@@ -194,30 +199,90 @@
                      </span>
                   </p>
                </section>
+
                <section class="main__discussions">
                   <header class="title">
                      <h2>Discussões</h2>
                   </header>
                   <div class="discussions__create">
-                     <h3>Compartilhe suas ideias ou dúvidas com os autores!</h3>
-                     <div class="icons">
-                        <img src="assets/imgs/icon1.png" alt="" /><img
-                           src="assets/imgs/icon2.png"
-                           alt=""
-                        /><img src="assets/imgs/icon3.png" alt="" />
+                     <div class="state1">
+                        <h3 class="create__title">
+                           Compartilhe suas ideias ou dúvidas com os autores!
+                        </h3>
+                        <div class="icons">
+                           <img src="assets/imgs/icon1.png" alt="" /><img
+                              src="assets/imgs/icon2.png"
+                              alt=""
+                           /><img src="assets/imgs/icon3.png" alt="" />
+                        </div>
+                        <p class="create__desc">
+                           Sabia que o maior estímulo no desenvolvimento
+                           científico e cultural é a curiosidade? Deixe seus
+                           questionamentos ou sugestões para o autor!
+                        </p>
+                        <div class="separator">
+                           <button id="create-topic" class="separator-btn">
+                              <img
+                                 src="assets/imgs/plusicon.png"
+                                 alt="Adicionar"
+                              />criar tópico
+                           </button>
+                        </div>
                      </div>
-                     <p>
-                        Sabia que o maior estímulo no desenvolvimento científico
-                        e cultural é a curiosidade? Deixe seus questionamentos
-                        ou sugestões para o autor!
-                     </p>
-                     <div class="separator">
-                        <button class="discussions-btn">
-                           <img
-                              src="assets/imgs/plusicon.png"
-                              alt="Adicionar"
-                           />criar tópico
-                        </button>
+                     <div class="state2 display">
+                        <h4>
+                           Tem uma dúvida ou sugestão? Compartilhe seu feedback
+                           com os autores!
+                        </h4>
+                        <form id="topic-form">
+                           <label for="topic"> Assunto </label>
+                           <input
+                              required
+                              id="topic"
+                              type="text"
+                              placeholder="Defina um tópíco sucinto para notificar os autores..."
+                           />
+                           <label for="content">Conteúdo</label>
+                           <div class="textarea">
+                              <textarea
+                                 required
+                                 id="content"
+                                 cols="30"
+                                 rows="5"
+                                 style="resize: none"
+                              ></textarea>
+                              <div class="content__submit">
+                                 <div class="wrapper">
+                                    <button type="button">
+                                       <img src="assets/imgs/B.png" alt="" />
+                                    </button>
+                                    <button type="button">
+                                       <img src="assets/imgs/I.png" alt="" />
+                                    </button>
+                                 </div>
+                                 <button class="submit-btn" type="submit">
+                                    Enviar
+                                 </button>
+                              </div>
+                           </div>
+                        </form>
+                        <div class="separator"></div>
+                     </div>
+                     <div class="state3 display">
+                        <h3 class="create__title">
+                           Seu tópico foi enviado com sucesso! :D
+                        </h3>
+                        <p class="create__desc">
+                           Sabia que o maior estímulo no desenvolvimento
+                           científico e cultural é a curiosidade? Deixe seus
+                           questionamentos ou sugestões para o autor!
+                        </p>
+                        <a href="#">Descubra outros trabalhos!</a>
+                        <div class="separator">
+                           <button id="create-new-topic" class="separator-btn">
+                              criar novo tópico
+                           </button>
+                        </div>
                      </div>
                   </div>
                   <div class="discussions__topics">
@@ -231,7 +296,13 @@
                                  relato inscreve-se no campo da análise da
                                  dimensão e impacto de processo formativo
                                  situado impacto de processo formativo
-                                 processo...
+                                 processo<span class="vanish">...</span
+                                 ><span class="appear">
+                                    resente relato inscreve-se no campo da
+                                    análise da dimensão e impacto de processo
+                                    formativo situado impacto de processo
+                                    formativo processo?
+                                 </span>
                               </p>
                               <div class="topic__socials">
                                  <button>
@@ -344,7 +415,13 @@
                                  relato inscreve-se no campo da análise da
                                  dimensão e impacto de processo formativo
                                  situado impacto de processo formativo
-                                 processo...
+                                 processo<span class="vanish">...</span>
+                                 <span class="appear">
+                                    resente relato inscreve-se no campo da
+                                    análise da dimensão e impacto de processo
+                                    formativo situado impacto de processo
+                                    formativo processo?
+                                 </span>
                               </p>
                               <div class="topic__socials">
                                  <button>
