@@ -7,8 +7,7 @@ main {
          'main-header main-share'
          'main-video main-details'
          'main-summary main-summary'
-         'main-discussions main-discussions'
-         'footer footer';
+         'main-discussions main-discussions';
       gap: 1rem;
       padding-top: 1.25rem;
       padding-bottom: 3.125rem;
@@ -150,6 +149,41 @@ button {
 
 // Discussions
 
+.over {
+   background: #dddddd;
+   position: relative;
+   button:hover {
+      filter: brightness(1);
+   }
+}
+
+.blur {
+   filter: blur(3px);
+}
+
+.overlay {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   z-index: 3;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 0.5rem;
+
+   p {
+      font-weight: 700;
+      color: #707070;
+   }
+
+   a {
+      color: $primary-color;
+      font-size: 0.875rem;
+      text-decoration: underline;
+   }
+}
+
 .main__discussions {
    grid-area: main-discussions;
    border: 1px solid #ececec;
@@ -276,7 +310,7 @@ button {
    padding: 0.9375rem;
    .topics__items {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       gap: 17px;
    }
 }
@@ -353,8 +387,38 @@ button {
    }
 }
 
-// Footer
-footer {
-   grid-area: footer;
-   text-align: center;
+@media screen and (max-width: 1024px) {
+   main {
+      .container {
+         grid-template-areas:
+            'main-header main-share'
+            'main-video main-video'
+            'main-details main-details'
+            'main-summary main-summary'
+            'main-discussions main-discussions';
+      }
+      .main__details {
+         justify-self: start;
+         max-width: 100%;
+         width: 100%;
+      }
+   }
+}
+
+@media screen and (max-width: 768px) {
+   main {
+      .container {
+         grid-template-areas:
+            'main-header'
+            'main-share'
+            'main-video'
+            'main-details'
+            'main-summary'
+            'main-discussions';
+         grid-template-columns: auto;
+      }
+      .main__share {
+         justify-self: start;
+      }
+   }
 }

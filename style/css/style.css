@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap");
+.close {
+  display: none;
+}
+
 .sidebar {
-  min-width: 16%;
-  max-width: 19%;
+  width: 16%;
   height: 100vh;
   position: fixed;
   display: flex;
@@ -12,6 +15,7 @@
   max-width: 220px;
   width: 100%;
   margin: 0 auto;
+  text-align: center;
 }
 .sidebar .sidebar__header {
   background: linear-gradient(180deg, #ffb354 0%, #ee7a3a 100%);
@@ -23,7 +27,7 @@
   align-items: center;
   justify-content: center;
 }
-.sidebar .sidebar__menu li {
+.sidebar .sidebar__item {
   background: white;
   color: #725c5c;
   font-weight: 500;
@@ -33,7 +37,7 @@
   cursor: pointer;
   transition: 0.2s filter;
 }
-.sidebar .sidebar__menu li:hover {
+.sidebar .sidebar__item:hover {
   filter: brightness(0.9);
 }
 .sidebar .active {
@@ -50,6 +54,43 @@
   top: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .sidebar {
+    visibility: hidden;
+    transform: translateX(-100%);
+    width: 100%;
+    transform-origin: left;
+    background: white;
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out;
+  }
+  .sidebar img {
+    margin: 0 calc(50% - 110px);
+  }
+  .sidebar .sidebar__header {
+    position: relative;
+  }
+  .sidebar .close {
+    color: white;
+    display: block;
+    position: absolute;
+    top: 2.125rem;
+    transform: translateY(-50%);
+    right: 1.5rem;
+    z-index: 100000;
+    cursor: pointer;
+  }
+
+  .sidebar.show {
+    display: block;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+.burguer {
+  display: none;
+}
+
 .header {
   background-color: #fdf1eb;
   color: #725c5c;
@@ -60,19 +101,6 @@
   align-items: center;
   justify-content: space-between;
   min-height: 4.25rem;
-}
-.header .header__text-wrapper {
-  font-weight: 400;
-  font-size: 0.875rem;
-  font-family: "Roboto", sans-serif;
-  height: 100%;
-  line-height: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.header .header__text-wrapper h2 {
-  font-size: 1.375rem;
 }
 .header .header__nav {
   display: flex;
@@ -124,11 +152,39 @@
   filter: brightness(0.9);
 }
 
+.header__text-wrapper {
+  font-weight: 400;
+  font-size: 0.875rem;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  line-height: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header__text-wrapper h2 {
+  font-size: 1.375rem;
+}
+
+@media screen and (max-width: 768px) {
+  .header .burguer {
+    display: block;
+    margin-right: 1rem;
+    color: white;
+    cursor: pointer;
+  }
+  .header .header__text-wrapper {
+    display: none;
+  }
+  .header .nav__profile {
+    display: none;
+  }
+}
 main .container {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "main-header main-share" "main-video main-details" "main-summary main-summary" "main-discussions main-discussions" "footer footer";
+  grid-template-areas: "main-header main-share" "main-video main-details" "main-summary main-summary" "main-discussions main-discussions";
   gap: 1rem;
   padding-top: 1.25rem;
   padding-bottom: 3.125rem;
@@ -251,6 +307,39 @@ button:hover {
 .main__summary p .show span {
   font-weight: 700;
   color: #ed7839;
+}
+
+.over {
+  background: #dddddd;
+  position: relative;
+}
+.over button:hover {
+  filter: brightness(1);
+}
+
+.blur {
+  filter: blur(3px);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.overlay p {
+  font-weight: 700;
+  color: #707070;
+}
+.overlay a {
+  color: #ed7839;
+  font-size: 0.875rem;
+  text-decoration: underline;
 }
 
 .main__discussions {
@@ -379,7 +468,7 @@ button:hover {
 }
 .discussions__topics .topics__items {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 17px;
 }
 
@@ -453,13 +542,36 @@ button:hover {
   font-size: 14px;
 }
 
+@media screen and (max-width: 1024px) {
+  main .container {
+    grid-template-areas: "main-header main-share" "main-video main-video" "main-details main-details" "main-summary main-summary" "main-discussions main-discussions";
+  }
+  main .main__details {
+    justify-self: start;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .container {
+    grid-template-areas: "main-header" "main-share" "main-video" "main-details" "main-summary" "main-discussions";
+    grid-template-columns: auto;
+  }
+  main .main__share {
+    justify-self: start;
+  }
+}
 footer {
-  grid-area: footer;
   text-align: center;
+}
+footer img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 body {
   font-family: "Quicksand", sans-serif;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -468,6 +580,17 @@ body {
 }
 
 .container {
-  padding: 0 5%;
+  padding: 0 2.8125rem;
   height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .scroll {
+    overflow-y: hidden;
+  }
 }/*# sourceMappingURL=style.css.map */

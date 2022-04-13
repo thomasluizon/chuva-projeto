@@ -11,24 +11,57 @@
    </head>
    <body>
       <aside class="sidebar">
+         <div class="close">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               width="20"
+               height="20"
+               fill="currentColor"
+               class="bi bi-x-lg"
+               viewBox="0 0 16 16"
+            >
+               <path
+                  fill-rule="evenodd"
+                  d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
+               />
+               <path
+                  fill-rule="evenodd"
+                  d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
+               />
+            </svg>
+         </div>
          <header class="sidebar__header">
             <h1>SLACA 2019</h1>
          </header>
          <img src="./assets/imgs/aside-logo.png" alt="Logo" />
-         <nav class="sidebar__menu">
+         <nav aria-label="navegação" class="sidebar__menu">
             <ul>
-               <li><a href="#">Apresentação</a></li>
-               <li><a href="#">Comitês</a></li>
-               <li><a href="#">Autores</a></li>
-               <li><a href="#">Eixos temáticos</a></li>
-               <li class="active"><a href="#">Trabalhos</a></li>
-               <li><a href="#">Contato</a></li>
+               <li class="sidebar__item"><a href="#">Apresentação</a></li>
+               <li class="sidebar__item"><a href="#">Comitês</a></li>
+               <li class="sidebar__item"><a href="#">Autores</a></li>
+               <li class="sidebar__item"><a href="#">Eixos temáticos</a></li>
+               <li class="sidebar__item active"><a href="#">Trabalhos</a></li>
+               <li class="sidebar__item"><a href="#">Contato</a></li>
             </ul>
          </nav>
       </aside>
       <div class="wrapper">
          <header class="header">
             <div class="container">
+               <div class="burguer">
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="20"
+                     height="20"
+                     class="bi bi-list"
+                     viewBox="0 0 16 16"
+                  >
+                     <path
+                        fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                     />
+                  </svg>
+               </div>
                <div class="header__text-wrapper">
                   <p>
                      Anais do Simpósio Latino Americano de Ciências de Alimentos

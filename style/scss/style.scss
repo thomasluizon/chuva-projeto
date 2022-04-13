@@ -4,15 +4,27 @@
 @import './sidebar';
 @import './header';
 @import './main';
+@import './footer';
 
 body {
    font-family: $primary-font;
+   overflow-x: hidden;
 }
 .wrapper {
    width: 84%;
    margin-left: 16%;
 }
 .container {
-   padding: 0 5%;
+   padding: 0 2.8125rem;
    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+   .wrapper {
+      margin-left: 0;
+      width: 100%;
+   }
+   .scroll {
+      overflow-y: hidden;
+   }
 }
