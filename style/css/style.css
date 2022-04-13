@@ -571,6 +571,7 @@ button:hover {
 .topics__item .topic__comments-comment p {
   font-size: 14px;
   line-height: 17.5px;
+  color: #4d4d4d;
 }
 .topics__item .topic__comments-comment header {
   display: flex;

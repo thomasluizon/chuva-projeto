@@ -394,6 +394,7 @@ button {
       p {
          font-size: 14px;
          line-height: 17.5px;
+         color: $text-color;
       }
       header {
          @include flex(space-between);
