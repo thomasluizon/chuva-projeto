@@ -594,6 +594,7 @@ button:hover {
 }
 .topics__item .topic__comments-answer p {
   font-size: 14px;
+  color: #4d4d4d;
 }
 
 @media screen and (max-width: 1024px) {
