@@ -18,6 +18,7 @@
       font-size: 0.875rem;
       display: flex;
       gap: 2px;
+      color: #333333;
       div {
          display: flex;
          flex-direction: column;
@@ -44,12 +45,22 @@
    }
    .nav__lang-selector {
       @include flex(center);
+      p {
+         line-height: 18px;
+         color: #333333;
+      }
+      .lang__arrow {
+         margin-top: 1px;
+         margin-left: 5px;
+      }
+      .lang__globe {
+         margin-bottom: 2px;
+      }
       background: $background-color;
       cursor: pointer;
-      gap: 5px;
       border: 1px solid #cccccc;
       border-radius: 3px;
-      padding: 0.5rem;
+      padding: 0.5rem 0.7rem;
       transition: 0.1s filter;
       &:hover {
          filter: brightness(0.9);
@@ -66,8 +77,12 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
+   p {
+      line-height: 16.41px;
+   }
    h2 {
       font-size: 1.375rem;
+      line-height: 25.78px;
    }
 }
 

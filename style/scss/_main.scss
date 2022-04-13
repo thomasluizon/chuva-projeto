@@ -15,6 +15,7 @@ main {
    .main__title {
       font: 900 1.25rem $secondary-font;
       color: $primary-color;
+      line-height: 25px;
    }
 }
 
@@ -37,6 +38,7 @@ button {
    h2 {
       color: #4e4e4e;
       font: 500 1.25rem $secondary-font;
+      line-height: 25px;
    }
 }
 
@@ -59,6 +61,7 @@ button {
       font: 500 0.875rem $secondary-font;
       color: $primary-color;
       text-transform: uppercase;
+      line-height: 25px;
    }
    .share-buttons {
       display: flex;
@@ -96,7 +99,7 @@ button {
    max-width: 252px;
    border: 1px solid #ececec;
    border-radius: 3px;
-
+   color: $text-color-light;
    strong {
       font-weight: 700;
    }
@@ -111,16 +114,28 @@ button {
    }
 }
 
+.details__desc {
+   display: flex;
+   flex-direction: column;
+   gap: 0.2rem;
+}
+
 .details__authors {
    font-size: 0.875rem;
    h3 {
       font-weight: 700;
    }
+   display: flex;
+   flex-direction: column;
    line-height: 16.8px;
+   gap: 0.2rem;
 }
 
 .details__colleges {
-   color: $text-color-light;
+   font-size: 0.75rem;
+   display: flex;
+   flex-direction: column;
+   gap: 0.2rem;
 }
 
 // Summary
@@ -137,7 +152,7 @@ button {
       text-align: justify;
       font-size: 0.875rem;
       font-weight: 400;
-
+      line-height: 21.33px;
       .show {
          span {
             font-weight: 700;
@@ -222,6 +237,7 @@ button {
    .create__desc {
       font-size: 0.875rem;
       line-height: 19.25px;
+      color: $text-color-grey;
    }
 }
 
@@ -243,6 +259,7 @@ button {
       font-size: 0.875rem;
       text-align: center;
       margin-bottom: 1.375rem;
+      color: $text-color-grey;
    }
 
    form {
@@ -304,6 +321,9 @@ button {
    .create__title {
       margin-bottom: 1.125rem;
    }
+   .separator-btn {
+      padding: 7px 3.4375rem;
+   }
 }
 
 .discussions__topics {
@@ -325,32 +345,40 @@ button {
    border-radius: 4px;
 
    h3 {
-      font: 700 1.125rem $secondary-font;
+      font: 700 1rem $secondary-font;
       color: $primary-color;
+      line-height: 20px;
    }
 
    h4 {
       font: 500 0.75rem $primary-font;
       margin-bottom: 10px;
+      line-height: 15px;
    }
 
    .item__comment {
       font-size: 0.875rem;
       margin-bottom: 11px;
-
+      line-height: 17.5px;
+      color: $text-color;
       .appear {
          display: none;
+         line-height: 17.5px;
       }
    }
 
    .topic__socials {
-      display: flex;
+      @include flex(flex-start);
       gap: 0.9375rem;
       .topic__socials-heart {
          background: $primary-color;
          @include flex(center);
          padding: 3px 7px;
          border-radius: 2px;
+      }
+      p {
+         color: #757575;
+         font-size: 0.875rem;
       }
    }
 
@@ -364,6 +392,7 @@ button {
       border: 1px solid #e7e7e7;
       p {
          font-size: 14px;
+         line-height: 17.5px;
       }
       header {
          @include flex(space-between);
