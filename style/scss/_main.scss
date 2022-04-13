@@ -454,3 +454,9 @@ button {
       }
    }
 }
+
+@media screen and (max-width: 492px) {
+   .state3 .separator-btn {
+      width: 100%;
+   }
+}

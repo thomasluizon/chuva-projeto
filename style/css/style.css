@@ -616,6 +616,11 @@ button:hover {
     justify-self: start;
   }
 }
+@media screen and (max-width: 492px) {
+  .state3 .separator-btn {
+    width: 100%;
+  }
+}
 footer {
   text-align: center;
 }
